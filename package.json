@@ -1,0 +1,17 @@
+{
+  "name": "@xlexiwolf/helpers",
+  "version": "1.0.0",
+  "author": "Alexis Vallentin <alexisvallentin@hotmail.com> (https://lexi.gg)",
+  "description": "A collection of TypeScript helper functions I use commonly throughout applications.",
+  "homepage": "https://github.com/xLexiWolf/helpers#readme",
+  "license": "MIT",
+  "main": "helpers.ts",
+  "repository": "github:xLexiWolf/helpers",
+  "bugs": {
+    "url": "https://github.com/xLexiWolf/helpers/issues",
+    "email": "alexisvallentin@hotmail.com"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}
