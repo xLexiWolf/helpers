@@ -5,13 +5,18 @@
   "description": "A collection of TypeScript helper functions I use commonly throughout applications.",
   "homepage": "https://github.com/xLexiWolf/helpers#readme",
   "license": "MIT",
-  "main": "helpers.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "github:xLexiWolf/helpers",
   "bugs": {
     "url": "https://github.com/xLexiWolf/helpers/issues",
     "email": "alexisvallentin@hotmail.com"
   },
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.5"
   }
 }
