@@ -22,7 +22,9 @@ const cardOutput = mapObject(cards, ({name, email}, k) => (
 
 ### scrollToTop
 
-````tsx
+Smooth scrolls to the top of the window.
+
+```tsx
 const button = <button onClick={scrollToTop}>Back to top</button>
 ```
 
