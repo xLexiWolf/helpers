@@ -20,10 +20,16 @@ const cardOutput = mapObject(cards, ({name, email}, k) => (
 ))
 ```
 
+### scrollToTop
+
+````tsx
+const button = <button onClick={scrollToTop}>Back to top</button>
+```
+
 ### toCurrencyString
 
 Formats a number and returns it as a currency string.
 
 ```ts
 const totalPrice = toCurrencyString(total * vat)
-```
+````

@@ -13,6 +13,11 @@ export function mapObject<T, K extends object>(
 }
 
 /**
+ * Smooth scrolls to the top of the window.
+ */
+export const scrollToTop = () => window.scrollTo({top: 0, behavior: 'smooth'})
+
+/**
  * Formats a number and returns it as a currency string.
  * @param number - The number to format.
  * @param currency - Currency to format with (Optional, defaults to 'GBP').
