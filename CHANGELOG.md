@@ -1,3 +1,9 @@
+## 1.0.3 (November 23, 2020)
+
+- Add encrypt helper
+- Add decrypt helper
+- Add .npmignore
+
 ## 1.0.2 (November 15, 2020)
 
 - Add scrollToTop helper

@@ -1,0 +1,4 @@
+lib
+.gitattributes
+.prettierrc
+tsconfig.json

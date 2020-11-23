@@ -10,6 +10,22 @@ $ npm install @xlexiwolf/helpers
 
 ## Helper Functions
 
+### encrypt
+
+Encrypts a string.
+
+```ts
+console.log(encrypt('secret', 'Hello world!'))
+```
+
+### decrypt
+
+Decrypts a string.
+
+```ts
+console.log(decrypt('secret', 'Hello world!'))
+```
+
 ### mapObject
 
 Works just like ES6 array.map() but for objects.
@@ -22,7 +38,9 @@ const cardOutput = mapObject(cards, ({name, email}, k) => (
 
 ### scrollToTop
 
-````tsx
+Smooth scrolls to the top of the window.
+
+```tsx
 const button = <button onClick={scrollToTop}>Back to top</button>
 ```
 
@@ -32,4 +50,4 @@ Formats a number and returns it as a currency string.
 
 ```ts
 const totalPrice = toCurrencyString(total * vat)
-````
+```
