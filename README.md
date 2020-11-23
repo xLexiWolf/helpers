@@ -23,7 +23,7 @@ console.log(encrypt('secret', 'Hello world!'))
 Decrypts a string.
 
 ```ts
-console.log(decrypt('secret', 'Hello world!'))
+console.log(decrypt('secret', 'KwQCCBZDNgEWFQdA'))
 ```
 
 ### mapObject
