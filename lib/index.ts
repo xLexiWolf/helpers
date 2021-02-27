@@ -108,6 +108,96 @@ export function decrypt(key, data) {
 }
 
 /**
+ * Changes date from SQL to UK format.
+ * @param date The date to format (Optional, defaults to 'new Date()').
+ * @param seperator The seperator to use (Optional, defaults to '/').
+ * @returns string
+ */
+export const formatDate = (date?: string, seperator?: string) => {
+  const sep = seperator ? seperator : '/'
+  const dateObj = date ? new Date(date) : new Date()
+  const formatDate = `${leadingZero(dateObj.getDate())}${sep}${leadingZero(
+    dateObj.getMonth() + 1
+  )}${sep}${dateObj.getFullYear()}`
+  return formatDate
+}
+
+/**
+ * Gets current date.
+ * @param seperator The seperator to use (Optional, defaults to '-').
+ * @returns The current date as string.
+ */
+export const getDate = (seperator?: string) => {
+  const sep = seperator ? seperator : '-'
+  const dateObj = new Date()
+  const formatDate = `${dateObj.getFullYear()}${sep}${leadingZero(
+    dateObj.getMonth() + 1
+  )}${sep}${leadingZero(dateObj.getDate())}`
+  return formatDate
+}
+
+/**
+ * Gets the difference in a date to now.
+ * @param eventDate The date to compare against.
+ * @returns The date difference as an object of numbers.
+ */
+export const getDateDifference = (eventDate: Date) => {
+  const currentDate = new Date()
+  const ms = currentDate.getTime() - eventDate.getTime()
+  let d: number, h: number, m: number, s: number
+  s = Math.floor(ms / 1000)
+  m = Math.floor(s / 60)
+  s = s % 60
+  h = Math.floor(m / 60)
+  m = m % 60
+  d = Math.floor(h / 24)
+  h = h % 24
+  return {d, h, m, s}
+}
+
+/**
+ * Gets current time.
+ * @returns The current time as string.
+ */
+export const getTime = () => {
+  const dateObj = new Date()
+  const formatTime = `${leadingZero(dateObj.getHours())}:${leadingZero(
+    dateObj.getMinutes()
+  )}`
+  return formatTime
+}
+
+/**
+ * Gets traffic light color based on percent.
+ * @param n1 The base number.
+ * @param n2 The number to divide by.
+ * @returns A color as string.
+ */
+export const getTrafficColor = (n1: number | null, n2: number) => {
+  let color: string = 'red'
+  if (n1 !== null) {
+    const percent = n1 / n2
+    if (percent >= 0 && percent <= 0.49) {
+      color = 'red'
+    } else if (percent >= 0.5 && percent <= 0.99) {
+      color = 'orange'
+    } else {
+      color = 'green'
+    }
+  } else {
+    color = 'green'
+  }
+  return color
+}
+
+/**
+ * Adds leading zero to number.
+ * @param n The number to format.
+ * @returns A number with leading zero.
+ */
+export const leadingZero = (n: number) => (n <= 9 ? parseInt(`0${n}`, 10) : n)
+
+/**
  * Works just like ES6 array.map() but for objects.
  * @param object The object to map.
  * @param callback Callback function with access to the value or key.

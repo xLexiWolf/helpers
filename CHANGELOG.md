@@ -1,3 +1,13 @@
+# 1.0.4 (Feburary 27, 2021)
+
+- Add formatDate helper
+- Add getDate helper
+- Add getDateDifference helper
+- Add getTime helper
+- Add getTrafficColor helper
+- Add leadingZero helper
+- Update packages
+
 ## 1.0.3 (November 23, 2020)
 
 - Add encrypt helper

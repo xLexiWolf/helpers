@@ -26,6 +26,54 @@ Decrypts a string.
 console.log(decrypt('secret', 'KwQCCBZDNgEWFQdA'))
 ```
 
+### formatDate
+
+Changes date from SQL to UK format.
+
+```ts
+const formattedDate = formatDate(data.date, '/')
+```
+
+### getDate
+
+Gets current date.
+
+```ts
+const date = getDate('/')
+```
+
+### getDateDifference
+
+Gets the difference in a date to now.
+
+```ts
+const difference = getDateDifference(date)
+```
+
+### getTime
+
+Gets current Time.
+
+```ts
+const time = getTime()
+```
+
+### getTrafficColor
+
+Gets traffic light color based on percent.
+
+```ts
+const color = getTrafficColor(passed, total)
+```
+
+### leadingZero
+
+Adds leading zero to number.
+
+```ts
+const formattedNumber = leadingZero(1)
+```
+
 ### mapObject
 
 Works just like ES6 array.map() but for objects.
