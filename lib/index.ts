@@ -114,7 +114,7 @@ export function decrypt(key, data) {
  * @returns string
  */
 export const formatDate = (date?: string, seperator?: string) => {
-  const sep = seperator ? seperator : '/'
+  const sep = seperator || '/'
   const dateObj = date ? new Date(date) : new Date()
   const formatDate = `${leadingZero(dateObj.getDate())}${sep}${leadingZero(
     dateObj.getMonth() + 1
@@ -128,7 +128,7 @@ export const formatDate = (date?: string, seperator?: string) => {
  * @returns The current date as string.
  */
 export const getDate = (seperator?: string) => {
-  const sep = seperator ? seperator : '-'
+  const sep = seperator || '-'
   const dateObj = new Date()
   const formatDate = `${dateObj.getFullYear()}${sep}${leadingZero(
     dateObj.getMonth() + 1
@@ -193,9 +193,9 @@ export const getTrafficColor = (n1: number | null, n2: number) => {
 /**
  * Adds leading zero to number.
  * @param n The number to format.
- * @returns A number with leading zero.
+ * @returns A string of specified number with a leading zero.
  */
-export const leadingZero = (n: number) => (n <= 9 ? parseInt(`0${n}`, 10) : n)
+export const leadingZero = (n: number) => (n <= 9 ? `0${n}` : `${n}`)
 
 /**
  * Works just like ES6 array.map() but for objects.

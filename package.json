@@ -1,6 +1,6 @@
 {
   "name": "@xlexiwolf/helpers",
-  "version": "1.0.41",
+  "version": "1.0.5",
   "author": "Alexis Vallentin <alexisvallentin@hotmail.com> (https://lexi.gg)",
   "description": "A collection of TypeScript helper functions I use commonly throughout applications.",
   "homepage": "https://github.com/xLexiWolf/helpers#readme",

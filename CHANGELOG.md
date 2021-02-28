@@ -1,3 +1,8 @@
+# 1.0.5 (February 28, 2021)
+
+- Fix leadingZero helper issue
+- Use better logic for seperators
+
 # 1.0.4 (Feburary 27, 2021)
 
 - Add formatDate helper
